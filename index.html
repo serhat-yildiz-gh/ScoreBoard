@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>ScoreBoard</title>
+</head>
+<body>
+    <div class="bg-image d-flex align-items-center">
+        <div class="container scoreboardSection">
+            <div class="blurSection">
+                <div class="row">
+                    <div class="col-4 teamColumn m-2">
+                        <div>
+                            <div>
+                                <h3 class="teamTitle" id="teamNameA">Takım A</h3>
+                                <p id="scoreA" class="score">0</p>
+                            </div>
+                            <div class="btnScore">
+                                <button class="btn btn-success" type="button" onclick="increaseScore('A')">+</button>
+                                <button class="btn btn-success" type="button" onclick="decreaseScore('A')">-</button>
+                            </div>
+                            <div class="btnGroup">
+                                <button class="btn btn-success" onclick="setTeamName('A')">Takım İsmi</button>
+                                <button class="btn btn-success" onclick="setScore('A')">Skor Ayarla</button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-4 teamColumn m-2">
+                        <div>
+                            <div>
+                                <h3 class="teamTitle" id="teamNameB">Takım B</h3>
+                                <p id="scoreB" class="score">0</p>
+                            </div>
+                            <div class="btnScore">
+                                <button class="btn btn-success" type="button" onclick="increaseScore('B')">+</button>
+                                <button class="btn btn-success" type="button" onclick="decreaseScore('B')">-</button>
+                            </div>
+                            <div class="btnGroup">
+                                <button class="btn btn-success" onclick="setTeamName('B')">Takım İsmi</button>
+                                <button class="btn btn-success" onclick="setScore('B')">Skor Ayarla</button>                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reset-button">
+                        <button class="btn btn-success" onclick="resetScores()">Sıfırla</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
